@@ -4,8 +4,8 @@ plugins {
 
 rootProject.name = 'consensusj'
 
-if (JavaVersion.current().compareTo(JavaVersion.VERSION_21) < 0) {
-    throw new RuntimeException("JDK 21 or later is required to compile ConsensusJ")
+if (JavaVersion.current().compareTo(JavaVersion.VERSION_25) < 0) {
+    throw new RuntimeException("JDK 25 or later is required to compile ConsensusJ")
 }
 
 // JDK 9
@@ -39,3 +39,4 @@ if (JavaVersion.current().compareTo(JavaVersion.VERSION_21) < 0) {
     include 'consensusj-jsonrpc-cli'            // JSON-RPC CLI library
     include 'consensusj-jrpc'                   // `jrpc` CLI Tool
     include 'cj-btc-cli'                        // Bitcoin JSON-RPC CLI
+    include 'cj-btc-db'                         // RocksDB-based blockchain database
